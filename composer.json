@@ -1,0 +1,29 @@
+{
+  "name": "devcreel/command-lockable-trait",
+  "description": "Symfony console command lockable trait",
+  "keywords": [
+    "symfony",
+    "console",
+    "command",
+    "lockable"
+  ],
+  "homepage": "https://github.com/DevCreel/CommandLockableTrait",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sergey Mazurak",
+      "email": "devcreel@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-0": {
+      "DevCreel\\Command": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  }
+}

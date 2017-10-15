@@ -1,0 +1,64 @@
+CommandLockableTrait [![version](http://img.shields.io/badge/release-v1.0.0-brightgreen.svg?style=flat)](https://github.com/DevCreel/MicroBench/archive/master.zip)
+======
+
+Symfony console command lockable trait
+
+Installation
+------------
+
+### Use ###
+
+Add this to composer.json
+
+```json
+{
+    "require": {
+        "devcreel/command-lockable-trait": "1.0.*-dev"
+    }
+}
+```
+
+Usage
+-----
+
+```php
+<?php
+
+namespace TestBundle\Command;
+
+use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+use DevCreel\Command\LockableTrait;
+
+class TestCommand extends ContainerAwareCommand
+{
+    use CommandLockableTrait;
+    
+    private $threadsCount = 5;
+    
+    protected function configure()
+    {
+        $this->setName('test:run');
+    }
+    
+    protected function execute(InputInterface $input, OutputInterface $output)
+    {
+        if (!$this->lock()) {
+            $output->writeln('[' . $this->getName() . '] is already running in another process.');
+            return 0;
+        }
+        
+        //your code...
+        
+        $this->release();
+    }
+    
+}
+
+```
+
+License
+-------
+__
+CommandLockableTrait is licensed under the MIT License

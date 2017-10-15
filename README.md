@@ -1,4 +1,4 @@
-CommandLockableTrait [![version](http://img.shields.io/badge/release-v1.0.1-brightgreen.svg?style=flat)](https://github.com/DevCreel/MicroBench/archive/master.zip)
+CommandLockableTrait [![version](http://img.shields.io/badge/release-v1.0.1-brightgreen.svg?style=flat)](https://github.com/DevCreel/CommandLockableTrait/archive/master.zip)
 ======
 
 Symfony console command lockable trait (very simple emulation of multithreading)

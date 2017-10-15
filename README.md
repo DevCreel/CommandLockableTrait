@@ -1,7 +1,7 @@
 CommandLockableTrait [![version](http://img.shields.io/badge/release-v1.0.0-brightgreen.svg?style=flat)](https://github.com/DevCreel/MicroBench/archive/master.zip)
 ======
 
-Symfony console command lockable trait
+Symfony console command lockable trait (very simple emulation of multithreading)
 
 Installation
 ------------
@@ -35,6 +35,7 @@ class TestCommand extends ContainerAwareCommand
 {
     use CommandLockableTrait;
     
+    //count of threads
     private $threadsCount = 5;
     
     protected function configure()
@@ -44,6 +45,7 @@ class TestCommand extends ContainerAwareCommand
     
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        //check for free thread
         if (!$this->lock()) {
             $output->writeln('[' . $this->getName() . '] is already running in another process.');
             return 0;
@@ -51,6 +53,7 @@ class TestCommand extends ContainerAwareCommand
         
         //your code...
         
+        //release thread
         $this->release();
     }
     

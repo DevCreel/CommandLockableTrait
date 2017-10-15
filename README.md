@@ -63,5 +63,4 @@ class TestCommand extends ContainerAwareCommand
 
 License
 -------
-__
 CommandLockableTrait is licensed under the MIT License

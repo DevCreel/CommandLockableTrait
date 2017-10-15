@@ -1,4 +1,4 @@
-CommandLockableTrait [![version](http://img.shields.io/badge/release-v1.0.0-brightgreen.svg?style=flat)](https://github.com/DevCreel/MicroBench/archive/master.zip)
+CommandLockableTrait [![version](http://img.shields.io/badge/release-v1.0.1-brightgreen.svg?style=flat)](https://github.com/DevCreel/MicroBench/archive/master.zip)
 ======
 
 Symfony console command lockable trait (very simple emulation of multithreading)
@@ -33,7 +33,7 @@ use DevCreel\Command\LockableTrait;
 
 class TestCommand extends ContainerAwareCommand
 {
-    use CommandLockableTrait;
+    use LockableTrait;
     
     //count of threads
     private $threadsCount = 5;

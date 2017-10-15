@@ -13,11 +13,13 @@
   "authors": [
     {
       "name": "Sergey Mazurak",
-      "email": "devcreel@gmail.com"
+      "email": "devcreel@gmail.com",
+      "homepage": "http://codehints.pro/",
+      "role": "Developer"
     }
   ],
   "autoload": {
-    "psr-0": {
+    "psr-4": {
       "DevCreel\\Command": "src/"
     }
   },

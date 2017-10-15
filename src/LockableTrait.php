@@ -27,7 +27,7 @@ namespace DevCreel\Command;
 use Symfony\Component\Console\Exception\RuntimeException;
 use Symfony\Component\Filesystem\LockHandler;
 
-trait CommandLockableTrait
+trait LockableTrait
 {
     private $lockHandler;
 
